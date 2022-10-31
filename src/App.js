@@ -6,6 +6,22 @@ function App() {
   console.log(postList)
   return (
     <div className="App">
+      <div>
+        <h1>React-redax掲示板</h1>
+      </div>
+      <div className="addPost">
+      <input type="text" placeholder="お名前"/>
+        <input type="text" placeholder="投稿内容"/>
+        <button>投稿</button>
+        <hr />
+      </div>
+      <div className="displayPosts">
+        {postList.map((post) => (
+          <div>
+            <h1>{post.name}</h1>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
