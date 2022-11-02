@@ -17,8 +17,10 @@ function App() {
       </div>
       <div className="displayPosts">
         {postList.map((post) => (
-          <div>
-            <h1>{post.name}</h1>
+          <div key={post.id} className="post">
+            <h1 className="postName">{post.name}</h1>
+            <h1 className="postContent">{post.content}</h1>
+            <button>削除</button>
           </div>
         ))}
       </div>
